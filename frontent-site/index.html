@@ -5,12 +5,50 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Web_Development_Project</title>
+  <title>Eatwell - Make The World A Tastier Place</title>
   <script defer src="../app.js"></script>
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./styles/shared.css">
+  <link rel="stylesheet" href="./styles/recommend.css">
 </head>
 <body>
-
-<h2>Hello World</h2>
-
+<header id="main-header">
+  <div id="logo"><a href="index.html">Eatwell</a></div>
+  <nav>
+    <ul>
+      <li class="nav-item"><a href="restaurants.html">Browse Restaurants</a></li>
+      <li class="nav-item"><a href="recommend.html">Share a Restaurant</a></li>
+      <li class="nav-item"><a href="about.html">About Eatwell</a></li>
+    </ul>
+  </nav>
+  <button id="drawer-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+<aside id="mobile-drawer">
+  <nav>
+    <ul>
+      <li class="nav-item"><a href="restaurants.html">Browse Restaurants</a></li>
+      <li class="nav-item"><a href="recommend.html">Share a Restaurant</a></li>
+      <li class="nav-item"><a href="about.html">About Eatwell</a></li>
+    </ul>
+  </nav>
+</aside>
+<main>
+  <h1>Make the world a tastier place!</h1>
+  <p>
+    Share your favorite restaurants or find recommendations of other users!
+  </p>
+  <ul id="actions">
+    <li>
+      <a href="restaurants.html">Browse Shared Restaurants</a>
+    </li>
+    <li>
+      <a href="recommend.html">Share Your Favorite Restaurant</a>
+    </li>
+  </ul>
+</main>
 </body>
 </html>
