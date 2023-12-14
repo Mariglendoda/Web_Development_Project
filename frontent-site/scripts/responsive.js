@@ -1,6 +1,6 @@
 console.log('App is running...');
 
-const drawerBtnElement = document.getElementById('drawer-btn');7
+const drawerBtnElement = document.getElementById('drawer-btn');
 const mobileDarwerElement = document.getElementById('mobile-drawer');
 
 function toggleDrawer() {
