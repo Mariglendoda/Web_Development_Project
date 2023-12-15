@@ -4,6 +4,8 @@ const express = require('express');
 
 const app = express();
 
+app.use(express.static(__dirname + '/public'));
+
 app.get('/', function (request, response) {
   const htmlPath = path.join(__dirname, 'views', 'index.html');
   response.sendFile(htmlPath);
@@ -29,7 +31,7 @@ app.get('/about', function (request, response) {
   response.sendFile(htmlPath);
 });
 
-app.listen(3000, () => console.log('Listening on port 3000'));
+app.listen(8080, () => console.log('Listening on port 8080'));
 
 
 
