@@ -6,27 +6,23 @@ const express = require('express');
 
 const app = express();
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
-app.use(express.static(__dirname + '/public'));
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 
-// Home page
 app.get('/', function (req, res) {
-  res.render('index');
+  const htmlFilePath = path.join(__dirname, 'views', 'index.html');
+  res.sendFile(htmlFilePath);
 });
 
-
-// Restaurants page
 app.get('/restaurants', function (req, res) {
-  res.render('restaurants');
+  const htmlFilePath = path.join(__dirname, 'views', 'restaurants.html');
+  res.sendFile(htmlFilePath);
 });
 
-
-// Recommendations page
 app.get('/recommend', function (req, res) {
-  res.render('recommend');
+  const htmlFilePath = path.join(__dirname, 'views', 'recommend.html');
+  res.sendFile(htmlFilePath);
 });
 
 app.post('/recommend', function (req, res) {
@@ -44,23 +40,13 @@ app.post('/recommend', function (req, res) {
 });
 
 app.get('/confirm', function (req, res) {
-  res.render('confirm');
+  const htmlFilePath = path.join(__dirname, 'views', 'confirm.html');
+  res.sendFile(htmlFilePath);
 });
 
 app.get('/about', function (req, res) {
-  res.render('about');
-});
-
-// Confirmation page
-app.get('/confirm', function (req, res) {
-  res.render('confirm');
-});
-
-
-
-// About page
-app.get('/about', function (req, res) {
-  res.render('about');
+  const htmlFilePath = path.join(__dirname, 'views', 'about.html');
+  res.sendFile(htmlFilePath);
 });
 
 app.listen(8080, () => console.log('Listening on port 8080'));
