@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Eat-well - Make The World A Tastier Place</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="preconnect" href="https://fonts.gstatic.com"/>
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@400;700&display=swap"
@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/styles/shared.css">
   <link rel="stylesheet" href="/styles/recommend.css">
   <script defer src="/scripts/responsive.js"></script>
+  <title>Eat-well - Make The World A Tastier Place</title>
 </head>
 <body>
 <header id="main-header">
@@ -49,7 +50,7 @@
 </aside>
 <main>
   <h1>Share your favorite restaurant!</h1>
-  <form>
+  <form action="/recommend" method="POST">
     <div class="form-control">
       <label for="name">Restaurant name</label>
       <input type="text" id="name" name="name" required/>
