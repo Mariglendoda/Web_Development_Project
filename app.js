@@ -5,7 +5,8 @@ const express = require('express');
 const app = express();
 
 app.get('/', function (request, response) {
-  response.send('<h1>My first express app</h1>');
+  const htmlPath = path.join(__dirname, 'views', 'index.html');
+  response.sendFile(htmlPath);
 });
 
 app.get('/restaurants', function (request, response) {
