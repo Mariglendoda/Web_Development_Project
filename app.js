@@ -10,16 +10,22 @@ app.use(express.static('public'));
 
 app.use(express.urlencoded({ extended: false }));
 
+
+// Home page
 app.get('/', function (req, res) {
   const htmlFilePath = path.join(__dirname, 'views', 'index.html');
   res.sendFile(htmlFilePath);
 });
 
+
+// Restaurants page
 app.get('/restaurants', function (req, res) {
   const htmlFilePath = path.join(__dirname, 'views', 'restaurants.html');
   res.sendFile(htmlFilePath);
 });
 
+
+// Recommend page
 app.get('/recommend', function (req, res) {
   const htmlFilePath = path.join(__dirname, 'views', 'recommend.html');
   res.sendFile(htmlFilePath);
@@ -39,11 +45,15 @@ app.post('/recommend', function (req, res) {
   res.redirect('/confirm');
 });
 
+
+// Confirm page
 app.get('/confirm', function (req, res) {
   const htmlFilePath = path.join(__dirname, 'views', 'confirm.html');
   res.sendFile(htmlFilePath);
 });
 
+
+// About page
 app.get('/about', function (req, res) {
   const htmlFilePath = path.join(__dirname, 'views', 'about.html');
   res.sendFile(htmlFilePath);
