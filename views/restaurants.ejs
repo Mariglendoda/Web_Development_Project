@@ -15,6 +15,7 @@
   <script defer src="/scripts/responsive.js"></script>
 </head>
 <body>
+
 <header id="main-header">
   <div id="logo"><a href="/">Eat-well</a></div>
   <nav>
@@ -34,6 +35,7 @@
     <span></span>
   </button>
 </header>
+
 <aside id="mobile-drawer">
   <nav>
     <ul>
@@ -47,30 +49,37 @@
     </ul>
   </nav>
 </aside>
+
 <main>
   <h1>Recommended restaurants</h1>
-  <p>Find your next favorite restaurants with help of our other users!</p>
-  <p>We found <%= numbersOfRestaurants %> restaurants.</p>
+  <% if (numbersOfRestaurants === 0) { %>
+    <p>Unfortunately, we have no restaurants yet - maybe start recommending some?</p>
+  <% } else { %>
 
-  <ul id="restaurants-list">
-    <% for (const restaurant of restaurants) { %>
-      <li class="restaurant-item">
-        <article>
-          <h2><%= restaurant.name %></h2>
-          <div class="restaurant-meta">
-            <p><%= restaurant.cuisine %></p>
-            <p><%= restaurant.address %></p>
-          </div>
-          <p>
-            <%= restaurant.description %>
-          </p>
-          <div class="restaurant-actions">
-            <a href="<%= restaurant.website %>">View Website</a>
-          </div>
-        </article>
-      </li>
-    <% } %>
-  </ul>
+    <p>Find your next favorite restaurants with help of our other users!</p>
+    <p>We found <%= numbersOfRestaurants %> restaurants.</p>
+
+    <ul id="restaurants-list">
+      <% for (const restaurant of restaurants) { %>
+        <li class="restaurant-item">
+          <article>
+            <h2><%= restaurant.name %></h2>
+            <div class="restaurant-meta">
+              <p><%= restaurant.cuisine %></p>
+              <p><%= restaurant.address %></p>
+            </div>
+            <p>
+              <%= restaurant.description %>
+            </p>
+            <div class="restaurant-actions">
+              <a href="<%= restaurant.website %>">View Website</a>
+            </div>
+          </article>
+        </li>
+      <% } %>
+    </ul>
+  <% } %>
+
 </main>
 </body>
 </html>
