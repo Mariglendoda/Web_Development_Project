@@ -28,7 +28,12 @@ app.get('/restaurants', function (req, res) {
   // const htmlFilePath = path.join(__dirname, 'views', 'restaurants.html');
   // res.sendFile(htmlFilePath);
   
-  res.render('restaurants');
+  const filePath = path.join(__dirname, 'data', 'restaurants.json');
+  
+  const fileData = fs.readFileSync(filePath);
+  const storedRestaurants = JSON.parse(fileData);
+  
+  res.render('restaurants', {numbersOfRestaurants: storedRestaurants.length});
 });
 
 

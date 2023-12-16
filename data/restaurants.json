@@ -12,5 +12,12 @@
     "cuisine": "dfs",
     "website": "https://sdf.com",
     "description": "asd"
+  },
+  {
+    "name": "Fation",
+    "address": "Bucimas",
+    "cuisine": "Greece",
+    "website": "https://fation.curo.com",
+    "description": "Hello world!"
   }
 ]
