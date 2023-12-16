@@ -41,7 +41,6 @@ app.post('/recommend', function (req, res) {
   storedRestaurants.push(restaurant);
   
   fs.writeFileSync(filePath, JSON.stringify(storedRestaurants));
-  
   res.redirect('/confirm');
 });
 
