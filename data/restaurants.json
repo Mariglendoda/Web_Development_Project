@@ -1,23 +1,9 @@
 [
   {
     "name": "Toka",
-    "address": "Tushemisht",
-    "cuisine": "Italian",
+    "address": "Udenisht",
+    "cuisine": "Albanien",
     "website": "https://toka.com",
-    "description": "asd"
-  },
-  {
-    "name": "dfs",
-    "address": "dfs",
-    "cuisine": "dfs",
-    "website": "https://sdf.com",
-    "description": "asd"
-  },
-  {
-    "name": "Fation",
-    "address": "Bucimas",
-    "cuisine": "Greece",
-    "website": "https://fation.curo.com",
-    "description": "Hello world!"
+    "description": "It's a awesome place 😍"
   }
 ]
