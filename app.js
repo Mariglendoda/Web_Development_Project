@@ -37,6 +37,12 @@ app.get('/restaurants', function (req, res) {
 });
 
 
+app.get('/restaurants/:id', function (req, res) {
+  const restaurantId = req.params.id;
+  
+  res.render('restaurant-detail', {rid: restaurantId});
+});
+
 // Recommend page
   app.get('/recommend', function (req, res) {
     // const htmlFilePath = path.join(__dirname, 'views', 'recommend.html');
