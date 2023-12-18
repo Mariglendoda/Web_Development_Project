@@ -1,5 +1,6 @@
 [
   {
+    "id": "r1",
     "name": "Toka",
     "address": "Udenisht",
     "cuisine": "Albanien",
@@ -7,6 +8,7 @@
     "description": "It's a awesome place 😍"
   },
   {
+    "id": "r2",
     "name": "Mariglen",
     "address": "Tushemisht",
     "cuisine": "asd",
