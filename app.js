@@ -99,6 +99,10 @@ app.use(function (req, res) {
   res.render('error');
 });
 
+app.use(function (error, req, res, next) {
+  res.render('500');
+});
+
 app.listen(8080, () => console.log('Listening on port 8080'));
 
 
