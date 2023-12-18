@@ -95,6 +95,10 @@ app.get('/about', function (req, res) {
   res.render('about');
 });
 
+app.use(function (req, res) {
+  res.render('error');
+});
+
 app.listen(8080, () => console.log('Listening on port 8080'));
 
 
