@@ -51,6 +51,8 @@ app.get('/restaurants/:id', function (req, res) {
       return res.render('restaurant-detail', {restaurant: restaurant});
     }
   }
+  
+  res.render('error');
 });
 
 // Recommend page
